@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Obed MBOMA</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/education.css">
+</head>
+
+<body>
+
+    <div id="page-loader">
+    <div class="loader"></div>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+<div class="nav-container">
+    <div class="logo">Obed <span>MBOMA</span></div>
+
+    <div class="links">
+        <a href="index.html">Accueil</a>
+        <a href="education.html">Éducation</a>
+        <a href="methode.html">Méthode de travail</a>
+        <a href="projets.html">Projets</a>
+    </div>
+</div>
+
+<i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+
+<div class="dropdown">
+<div class="links">
+    <a href="index.html">Accueil</a>
+    <a href="education.html">Éducation</a>
+    <a href="methode.html">Méthode de travail</a>
+    <a href="projets.html">Projets</a>
+    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+</div>
+</div>
+</nav>
+
+<!-- SECTION CONTACT -->
+<section class="education">
+<h1>Contactez-moi</h1>
+
+<p class="intro">
+Pour toute question ou collaboration, utilisez le formulaire ci-dessous ou mes coordonnées directes.
+</p>
+
+<div class="options">
+
+<!-- Carte Email -->
+<div class="card">
+<h2>Email</h2>
+<p><a href="mailto:obed.mboma0@gmail.com" style="color:white; text-decoration:none;">obed.mboma0@gmail.com</a></p>
+</div>
+
+<!-- Carte Téléphone -->
+<div class="card">
+<h2>Téléphone</h2>
+<p><a href="tel:+33651073389" style="color:white; text-decoration:none;">+33 6 51 07 33 89</a></p>
+</div>
+
+</div>
+
+<!-- FORMULAIRE -->
+<div class="form-container" style="margin-top: 40px; max-width:600px; margin-left:auto; margin-right:auto;">
+<form id="contactForm">
+    <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="Nom" required placeholder="Votre nom">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="Email" required placeholder="Votre email">
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" required placeholder="Votre message"></textarea>
+    </div>
+    <div style="text-align:center; margin-top:20px;">
+        <button type="submit">Envoyer</button>
+    </div>
+    <p id="formFeedback" style="text-align:center; margin-top:15px; color: rgb(211,3,3); font-weight:600;"></p>
+</form>
+</div>
+
+</section>
+
+<script src="js/script.js"></script>
+<script>
+    const contactForm = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formFeedback');
+
+    contactForm.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        // récupération des valeurs
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if(name === '' || email === '' || message === ''){
+            formFeedback.textContent = "Merci de remplir tous les champs.";
+            return;
+        }
+
+        // Simuler un envoi
+        setTimeout(() => {
+            formFeedback.textContent = "Votre message a été envoyé avec succès !";
+            contactForm.reset();
+        }, 1000);
+    });
+</script>
+
+</body>
+</html>

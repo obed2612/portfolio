@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* SECTION MÉTHODE */
+.methode {
+    padding: 60px 10%;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.methode h1 {
+    font-size: 2.5rem;
+    color: rgb(211,3,3);
+    text-shadow: 0 0 10px rgb(211,3,3);
+    margin-bottom: 20px;
+    animation: fadeSlide 1s ease-in-out;
+}
+
+.methode h2 {
+    font-size: 2rem;
+    color: rgb(211,3,3);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgb(211,3,3);
+    animation: fadeSlide 1s ease-in-out;
+}
+
+.methode p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: fadeSlide 1s ease-in-out;
+}
+
+/* COMPETENCES */
+.competences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.competences h3 {
+    color: rgb(211,3,3);
+    margin-bottom: 10px;
+}
+
+.competences ul {
+    list-style: none;
+}
+
+.competences ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* PROCESSUS DE TRAVAIL */
+.processus {
+    margin-top: 30px;
+}
+
+.phase {
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    border-left: 3px solid rgb(211,3,3);
+    animation: fadeSlide 1s ease-in-out;
+}
+
+.phase h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: rgb(211,3,3);
+}
+
+.phase p {
+    font-size: 1rem;
+}
+
+/* BOUTON RETOUR */
+.btn.retour {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn.retour button {
+    padding: 12px 30px;
+    background-color: rgb(211,3,3);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn.retour button:hover {
+    scale: 1.1;
+    background-color: transparent;
+    color: rgb(211,3,3);
+    border: 2px solid rgb(211,3,3);
+    box-shadow: 0 0 20px rgb(211,3,3);
+}
+
+/* ANIMATIONS FADE / SLIDE */
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .competences {
+        flex-direction: column;
+    }
+
+    .phase {
+        padding-left: 10px;
+    }
+
+    .methode {
+        padding: 40px 5%;
+    }
+}
+
+@media (max-width: 480px) {
+    .methode h1 {
+        font-size: 2rem;
+    }
+
+    .methode h2 {
+        font-size: 1.5rem;
+    }
+
+    .methode p, .competences ul li, .phase p {
+        font-size: 0.95rem;
+    }
+}
