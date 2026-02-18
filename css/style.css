@@ -73,27 +73,44 @@ nav{
 }
 
 /* DROPDOWN */
+/* DROPDOWN (mobile) */
 .dropdown{
     z-index: 100;
     position: absolute;
-    top: 0;
-    transform: translateY(-500px);
+    top: 10vh; /* juste sous la barre de navigation */
+    left: 0;
     width: 100%;
-    height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
-    box-shadow: 0 0 20px black;
-    transition: 0.2s linear;
+    background-color: rgba(0,0,0,0.95);
+    display: flex;
+    flex-direction: column; /* liens empilés verticalement */
+    align-items: center;
+    padding: 20px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.dropdown.open{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown .links{
+    display: flex;
+    flex-direction: column; /* empilement vertical */
+    width: 100%;
+    align-items: center;
 }
 
 .dropdown .links a{
-    display: flex;
-    color: white;
-    text-decoration: none;
-    padding: 10px 0; /* réduit */
-    justify-content: center;
-    align-items: center;
-    transition: 0.2s linear;
+    display: block;
+    width: 80%; /* pour que chaque lien fasse presque toute la largeur */
+    text-align: center;
+    padding: 12px 0;
+    margin: 5px 0;
+    border-bottom: 1px solid rgba(211,3,3,0.3); /* optionnel pour séparation */
 }
+
 
 .dropdown .links a:hover{
     background-color: rgb(211,3,3);
