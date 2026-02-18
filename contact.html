@@ -5,27 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - Obed MBOMA</title>
 
+<!-- FontAwesome pour les icônes -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- CSS principal pour garder le menu -->
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/education.css">
+<!-- CSS spécifique contact pour formulaire et boutons -->
+<link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
 
-    <div id="page-loader">
+<div id="page-loader">
     <div class="loader"></div>
 </div>
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION identique à toutes les pages -->
 <nav>
 <div class="nav-container">
     <div class="logo">Obed <span>MBOMA</span></div>
-
     <div class="links">
         <a href="index.html">Accueil</a>
-        <a href="education.html">Éducation</a>
-        <a href="methode.html">Méthode de travail</a>
-        <a href="projets.html">Projets</a>
+        <a href="parcours_competences.html">Parcours & Compétences</a>
+        <a href="methode.html">Méthode</a>
+        <a href="contact.html" class="active">Contact</a>
     </div>
 </div>
 
@@ -34,9 +37,9 @@
 <div class="dropdown">
 <div class="links">
     <a href="index.html">Accueil</a>
-    <a href="education.html">Éducation</a>
-    <a href="methode.html">Méthode de travail</a>
-    <a href="projets.html">Projets</a>
+    <a href="parcours_competences.html">Parcours & Compétences</a>
+    <a href="methode.html">Méthode</a>
+    <a href="contact.html" class="active">Contact</a>
     <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
 </div>
 </div>
@@ -47,7 +50,7 @@
 <h1>Contactez-moi</h1>
 
 <p class="intro">
-Pour toute question ou collaboration, utilisez le formulaire ci-dessous ou mes coordonnées directes.
+Pour toute question ou collaboration, contactez-moi par email ou via le formulaire ci-dessous.
 </p>
 
 <div class="options">
@@ -55,13 +58,9 @@ Pour toute question ou collaboration, utilisez le formulaire ci-dessous ou mes c
 <!-- Carte Email -->
 <div class="card">
 <h2>Email</h2>
-<p><a href="mailto:obed.mboma0@gmail.com" style="color:white; text-decoration:none;">obed.mboma0@gmail.com</a></p>
-</div>
-
-<!-- Carte Téléphone -->
-<div class="card">
-<h2>Téléphone</h2>
-<p><a href="tel:+33651073389" style="color:white; text-decoration:none;">+33 6 51 07 33 89</a></p>
+<p>
+<a href="mailto:obed.mboma0@gmail.com" class="btn-mail">obed.mboma0@gmail.com</a>
+</p>
 </div>
 
 </div>
@@ -82,7 +81,7 @@ Pour toute question ou collaboration, utilisez le formulaire ci-dessous ou mes c
         <textarea id="message" name="Message" required placeholder="Votre message"></textarea>
     </div>
     <div style="text-align:center; margin-top:20px;">
-        <button type="submit">Envoyer</button>
+        <button type="submit" class="btn-submit">Envoyer</button>
     </div>
     <p id="formFeedback" style="text-align:center; margin-top:15px; color: rgb(211,3,3); font-weight:600;"></p>
 </form>
@@ -92,28 +91,25 @@ Pour toute question ou collaboration, utilisez le formulaire ci-dessous ou mes c
 
 <script src="js/script.js"></script>
 <script>
-    const contactForm = document.getElementById('contactForm');
-    const formFeedback = document.getElementById('formFeedback');
+const contactForm = document.getElementById('contactForm');
+const formFeedback = document.getElementById('formFeedback');
 
-    contactForm.addEventListener('submit', function(e){
-        e.preventDefault();
+contactForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-        // récupération des valeurs
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
+    if(name === '' || email === '' || message === ''){
+        formFeedback.textContent = "Merci de remplir tous les champs.";
+        return;
+    }
 
-        if(name === '' || email === '' || message === ''){
-            formFeedback.textContent = "Merci de remplir tous les champs.";
-            return;
-        }
-
-        // Simuler un envoi
-        setTimeout(() => {
-            formFeedback.textContent = "Votre message a été envoyé avec succès !";
-            contactForm.reset();
-        }, 1000);
-    });
+    setTimeout(() => {
+        formFeedback.textContent = "Votre message a été envoyé avec succès !";
+        contactForm.reset();
+    }, 1000);
+});
 </script>
 
 </body>

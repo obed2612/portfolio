@@ -5,45 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Veille Technologique - Obed MBOMA</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/education.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/stage.css">
+
 </head>
 
-<body>
+<body data-page="veille">
 
-    <div id="page-loader">
-    <div class="loader"></div>
+<div id="page-loader">
+<div class="loader"></div>
 </div>
 
 <!-- NAVIGATION -->
 <nav>
 <div class="nav-container">
-    <div class="logo">Obed <span>MBOMA</span></div>
 
-    <div class="links">
-        <a href="index.html">Accueil</a>
-        <a href="education.html">Éducation</a>
-        <a href="methode.html">Méthode de travail</a>
-        <a href="contact.html">Contact</a>
-    </div>
+<div class="logo">Obed <span>MBOMA</span></div>
+
+<div class="links">
+<a href="index.html" class="transition-link">Accueil</a>
+<a href="parcours_competences.html" class="transition-link">Parcours & Compétences</a>
+
+<a href="education.html" class="transition-link secondary-link">Éducation</a>
+<a href="methode.html" class="transition-link secondary-link">Méthode de travail</a>
+<a href="projets.html" class="transition-link secondary-link">Projets</a>
+<a href="contact.html" class="transition-link secondary-link">Contact</a>
+</div>
+
 </div>
 
 <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
 
 <div class="dropdown">
 <div class="links">
-    <a href="index.html">Accueil</a>
-    <a href="education.html">Éducation</a>
-    <a href="methode.html">Méthode de travail</a>
-    <a href="contact.html">Contact</a>
-    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+
+<a href="index.html" class="transition-link">Accueil</a>
+<a href="parcours_competences.html" class="transition-link">Parcours & Compétences</a>
+
+<a href="education.html" class="secondary-link">Éducation</a>
+<a href="methode.html" class="secondary-link">Méthode de travail</a>
+<a href="projets.html" class="secondary-link">Projets</a>
+<a href="contact.html" class="secondary-link">Contact</a>
+
+<i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+
 </div>
 </div>
 </nav>
 
-<!-- SECTION VEILLE TECHNOLOGIQUE -->
+<!-- SECTION VEILLE -->
 <section class="education">
+
 <h1>Veille Technologique</h1>
 
 <p class="intro">
@@ -52,78 +66,134 @@ La veille technologique est essentielle pour rester à jour dans le domaine de l
 
 <div class="options">
 
-<!-- Définition -->
+<!-- DEFINITION -->
 <div class="card">
 <h2>Qu'est-ce qu'une veille technologique ?</h2>
+
 <p>
-Une veille technologique est une activité qui consiste à surveiller en continu les nouveautés, innovations, tendances et évolutions dans un secteur donné, ici le développement web.
+Une veille technologique est une activité qui consiste à surveiller en continu les nouveautés,
+innovations, tendances et évolutions dans un secteur donné, ici le développement web.
 </p>
-</div>
 
-<!-- Pourquoi faire de la veille -->
-<div class="card">
-<h2>Pourquoi faire de la veille technologique ?</h2>
+<h3>Pourquoi faire de la veille ?</h3>
 <ul>
-    <li>Rester compétitif (ne pas utiliser des outils dépassés).</li>
-    <li>Innover en utilisant les technologies les plus efficaces.</li>
-    <li>Anticiper les changements du marché (nouveaux standards, nouvelles exigences).</li>
-    <li>Gagner du temps en adoptant des outils qui facilitent ou accélèrent le travail.</li>
+<li>Rester compétitif et éviter les outils dépassés</li>
+<li>Innover avec les technologies modernes</li>
+<li>Anticiper les changements du marché</li>
+<li>Gagner du temps avec des outils performants</li>
 </ul>
-</div>
 
-<!-- Comment faire -->
-<div class="card">
-<h2>Comment faire une veille technologique ?</h2>
+<h3>Comment faire une veille ?</h3>
+
 <ul>
-    <li>Suivre des blogs spécialisés, newsletters et podcasts.</li>
-    <li>Lire des articles de recherche ou des livres blancs.</li>
-    <li>Utiliser des outils de curation (ex: Feedly, Medium, Dev.to).</li>
-    <li>Participer à des conférences, webinaires et meetups.</li>
-    <li>Observer les mises à jour sur GitHub ou les annonces de grandes entreprises tech (Google, Meta, Vercel, etc.).</li>
+<li>Suivre blogs spécialisés, newsletters et podcasts</li>
+<li>Lire articles techniques et livres blancs</li>
+<li>Utiliser Feedly, Medium, Dev.to</li>
+<li>Participer à conférences et webinaires</li>
+<li>Observer GitHub et annonces des grandes entreprises tech</li>
 </ul>
+
 </div>
 
-<!-- Nouveaux frameworks -->
+<!-- FRAMEWORK -->
 <div class="card">
-<h2>Nouveaux frameworks et outils populaires</h2>
+<h2>Ma veille : Frameworks et outils modernes</h2>
+
+<p><strong>Next.js 14 :</strong><br>
+Framework incontournable pour créer des applications React rapides et SEO-friendly,
+avec Server Actions simplifiées.
+</p>
+
+<p><strong>Bun :</strong><br>
+Runtime JavaScript ultra-rapide alternatif à Node.js avec bundling et serveur intégré.
+</p>
+
+<p><strong>Turbopack :</strong><br>
+Remplaçant moderne de Webpack développé par Vercel,
+offrant un bundling instantané même pour les gros projets.
+</p>
+
+</div>
+
+<!-- TENDANCES -->
+<div class="card">
+<h2>Tendances actuelles du développement web</h2>
+
 <ul>
-    <li><strong>Next.js 14 :</strong> Devenu incontournable pour construire des applications web React rapides et SEO-friendly, grâce au système Server Actions simplifié.</li>
-    <li><strong>Bun :</strong> Un nouveau runtime JavaScript ultra-rapide, alternatif à Node.js, avec gestion native du bundling, transpilation et serveur web.</li>
-    <li><strong>Turbopack :</strong> Remplaçant de Webpack développé par Vercel. Bundling instantané même sur les gros projets (des centaines de fois plus rapide).</li>
+<li>Vitesse accrue (Bun, Turbopack)</li>
+<li>Modularité (micro-frontends, serverless)</li>
+<li>Intégration d’IA pour coder plus efficacement</li>
+<li>Expérience utilisateur fluide et interactive</li>
+<li>Sécurité renforcée (Passkeys, Zero Trust)</li>
 </ul>
+
 </div>
 
-<!-- Outils de veille automatiques -->
+<!-- SOURCES -->
 <div class="card">
-<h2>Outils de veille automatiques</h2>
+<h2>Sources de veille</h2>
+
+<p><strong>Blogs et actualités :</strong></p>
 <ul>
-    <li>Feedly : Agrégateur de flux RSS pour centraliser toutes ces sources.</li>
-    <li>Google Alerts : Recevez des alertes sur des mots-clés comme "Next.js update" ou "CSS new features".</li>
+<li>Smashing Magazine</li>
+<li>CSS-Tricks</li>
+<li>SitePoint</li>
+<li>A List Apart</li>
+<li>Web.dev</li>
 </ul>
+
+<p><strong>Documentation :</strong></p>
+<ul>
+<li>MDN Web Docs</li>
+<li>W3C News</li>
+<li>WHATWG Blog</li>
+</ul>
+
+<p><strong>Newsletters :</strong></p>
+<ul>
+<li>Frontend Focus</li>
+<li>JavaScript Weekly</li>
+<li>CSS Weekly</li>
+<li>React Status</li>
+<li>Node Weekly</li>
+</ul>
+
+<p><strong>Communautés :</strong></p>
+<ul>
+<li>Dev.to</li>
+<li>Reddit (r/webdev, r/frontend, r/javascript)</li>
+<li>Twitter/X développeurs</li>
+</ul>
+
+<p><strong>Vidéo & formation :</strong></p>
+<ul>
+<li>YouTube : Academind, Fireship, Traversy Media, The Net Ninja</li>
+<li>freeCodeCamp, Coursera, Udemy, edX</li>
+</ul>
+
+<p><strong>Suivi technologique :</strong></p>
+<ul>
+<li>Can I use</li>
+<li>GitHub Release Radar</li>
+<li>Product Hunt Dev Tools</li>
+<li>Hacker News</li>
+<li>Feedly</li>
+<li>Google Alerts</li>
+</ul>
+
 </div>
 
-<!-- Sites d'actualités et blogs -->
-<div class="card">
-<h2>Sites d'actualités et blogs spécialisés</h2>
-<p>Exemple : SitePoint – sitepoint.com</p>
-<div class="btn">
-<a href="https://www.sitepoint.com/" target="_blank">
-<button>Visiter SitePoint</button>
-</a>
-</div>
 </div>
 
-<!-- Bouton retour -->
-<div class="btn">
-<a href="index.html">
-<button>Retour à l'accueil</button>
-</a>
-</div>
-
-</div>
 </section>
 
 <script src="js/script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('.secondary-link').forEach(link => link.style.display='none');
+});
+</script>
 
 </body>
 </html>

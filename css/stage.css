@@ -1,0 +1,79 @@
+/* ============================= */
+/* RESET BASE */
+/* ============================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color:#000;
+    color:white;
+}
+
+/* ============================= */
+/* TITRES GÉNÉRAUX */
+/* ============================= */
+h1,h2,h3{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* ============================= */
+/* SECTION STAGE / STAGE2 (CENTRAGE GLOBAL AVEC MARGE) */
+/* ============================= */
+.stage, .stage2{
+    width:90%;             /* moins large pour laisser marge gauche/droite */
+    max-width:1200px;      /* limite largeur max */
+    margin:0 auto;         /* centre horizontalement */
+    padding:60px 20px;     /* espace intérieur pour ne pas coller aux bords */
+    display:flex;
+    flex-direction:column;
+    align-items:center;     /* centre horizontalement les cartes */
+}
+
+/* ============================= */
+/* BLOCS / CARDS (DESIGN NOIR/ROUGE) */
+/* ============================= */
+.card{
+    background-color:#111;
+    border-radius:10px;
+    box-shadow:0 0 15px red;
+    padding:25px;
+    margin:20px 0;
+
+    width:100%;            /* occupe tout le container */
+    max-width:1100px;      /* limite largeur pour laisser marge */
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+    box-shadow:0 0 25px red;
+}
+
+.card h2{
+    color:red;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.card p{
+    line-height:1.6;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+@media(max-width:768px){
+    .stage, .stage2{
+        width:95%;
+        padding:40px 10px;
+    }
+
+    .card{
+        width:100%;
+    }
+}

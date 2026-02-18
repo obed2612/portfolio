@@ -37,7 +37,7 @@ links.forEach(link => {
 });
 
 /* ================= TYPEWRITER ================= */
-const texts = ["Développeur Web", "Étudiant BTS SIO", "Passionné de Tech"];
+const texts = ["Développeur Web", "développeur front-end", "developpeur back-end", "Concepteur" ,"Dévéloppeur logiciel", "Criptographe", "Passionné de la Tech"];
 let index = 0;
 let charIndex = 0;
 const speed = 100;

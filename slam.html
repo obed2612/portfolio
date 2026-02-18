@@ -4,59 +4,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SLAM - BTS SIO</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/education.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+<body data-page="slam">
 
-<body>
-
-    <div id="page-loader">
-    <div class="loader"></div>
+<div id="page-loader">
+<div class="loader"></div>
 </div>
 
-<!-- NAVIGATION -->
 <nav>
 <div class="nav-container">
-<div class="logo">Obed <span>MBOMA</span></div>
+    <div class="logo">Obed <span>MBOMA</span></div>
+    <div class="links">
+        <a href="index.html" class="transition-link">Accueil</a>
+        <a href="education.html" class="transition-link">Éducation</a>
 
+        <!-- Liens à masquer -->
+        <a href="methode.html" class="transition-link secondary-link">Méthode de travail</a>
+        <a href="projets.html" class="transition-link secondary-link">Projets</a>
+    </div>
+</div>
+
+<i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+<div class="dropdown">
 <div class="links">
-<a href="index.html">Accueil</a>
-<a href="education.html">Éducation</a>
-<a href="methode.html">Méthode de travail</a>
-<a href="projets.html">Projets</a>
-<a href="contact.html">Contact</a>
+    <a href="index.html" class="transition-link">Accueil</a>
+    <a href="education.html" class="transition-link">Éducation</a>
+
+    <a href="methode.html" class="transition-link secondary-link">Méthode de travail</a>
+    <a href="projets.html" class="transition-link secondary-link">Projets</a>
+
+    <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
 </div>
 </div>
 </nav>
 
 <section class="education">
 <h1>SLAM - Détails</h1>
-<p>
-La spécialité SLAM (Solutions Logicielles et Applications Métiers) se concentre sur :
-</p>
-
+<p>La spécialité SLAM (Solutions Logicielles et Applications Métiers) se concentre sur :</p>
 <div class="options">
-<div class="card">
-<h2>Développement Web</h2>
-<p>Création de sites web interactifs et applications front-end et back-end.</p>
+<div class="card"><h2>Développement Web</h2><p>Création de sites web interactifs et applications front-end et back-end.</p></div>
+<div class="card"><h2>Applications métiers</h2><p>Conception et maintenance d’applications pour entreprises.</p></div>
+<div class="card"><h2>Bases de données</h2><p>Conception, administration et optimisation de bases de données.</p></div>
 </div>
-<div class="card">
-<h2>Applications métiers</h2>
-<p>Conception et maintenance d’applications pour entreprises.</p>
-</div>
-<div class="card">
-<h2>Bases de données</h2>
-<p>Conception, administration et optimisation de bases de données.</p>
-</div>
-</div>
-
-<div style="margin-top: 30px;">
-<a href="education.html" class="card">← Retour vers Éducation</a>
-</div>
+<div style="margin-top:30px;"><a href="education.html" class="card">← Retour vers Éducation</a></div>
 </section>
 
 <script src="js/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.secondary-link').forEach(link => link.style.display='none');
+});
+</script>
 </body>
 </html>
