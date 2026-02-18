@@ -66,12 +66,4 @@ function eraseText() {
     }
 }
 
-typeWriter();
 
-document.addEventListener('click', function(e) {
-    const dropdown = document.querySelector('.dropdown');
-    const hamburg = document.querySelector('.hamburg');
-    if (!dropdown.contains(e.target) && !hamburg.contains(e.target)) {
-        dropdown.classList.remove('open');
-    }
-});
